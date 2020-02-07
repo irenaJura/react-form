@@ -20,11 +20,12 @@ export class Input extends React.Component {
   }
 
   // listen for a change on the input, create a new method
+  // add value attribute that reflects user input
   render() {
     return (
       <div>
-        <input type="text" onChange={this.handleChange} />
-        <h1>Hi, I'm H1</h1>
+        <input type="text" onChange={this.handleChange} value={this.state.userInput}/>
+        <h1>{this.state.userInput}</h1>
       </div>
     );
   }
