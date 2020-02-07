@@ -10,7 +10,15 @@ export class Input extends React.Component {
     this.state = {
       userInput: ''
     }
+    this.handleChange = this.handleChange.bind(this);
   }
+  // sets the state to reflect what the user types
+  handleChange(e) {
+    this.setState({
+      userInput: e.target.value
+    });
+  }
+
   // listen for a change on the input, create a new method
   render() {
     return (
